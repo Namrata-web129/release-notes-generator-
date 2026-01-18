@@ -1,1 +1,1 @@
-⚠️ Error: AI Rate limit exceeded. Please try again in a few minutes.
+It looks like you didn't enter anything. What can I help you with today?
