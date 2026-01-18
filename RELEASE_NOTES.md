@@ -1,0 +1,1 @@
+⚠️ Error: AI Rate limit exceeded. Please try again in a few minutes.
