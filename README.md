@@ -1,46 +1,52 @@
-🚀 Professional Release Automator
-An AI-powered tool that analyzes GitHub commits and Pull Requests to generate structured, professional release notes. It automatically categorizes changes into Features, Fixes, Docs, and Breaking Changes.
+# 🚀 Professional Release Automator
 
-🛠️ Setup Instructions
-1. Clone the Repository
-Bash
-  git clone https://github.com/your-username/your-repo-name.git
-  cd your-repo-name
+An AI-powered tool that analyzes GitHub commits and Pull Requests to generate structured release notes.
 
-2. Configure Environment Variables
-   To protect your privacy, the .env file is excluded from this repository.
-   Locate the .env.example file.
-   Create a copy named .env.
-Fill in your personal API keys:
-  Plaintext
-  # .env file
-  GITHUB_TOKEN=your_github_personal_access_token
-  GEMINI_API_KEY=your_google_gemini_api_key
+---
 
-3. Install Dependencies
-It is recommended to use a virtual environment:
-Bash
-  # Create and activate environment
-  python -m venv env
-  source env/Scripts/activate  # Windows: .\env\Scripts\activate
+## 🛠️ Setup Instructions
 
-  # Install libraries
-  pip install -r requirements.txt
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 
-🚀 Usage
+### 2. Configure Environment Variables
+To protect your privacy, the `.env` file is excluded from this repository. Locate the `.env.example` file and create a copy named `.env`.
+
+**Fill in your keys in this format:**
+
+```plaintext
+# .env file (This is configuration, not code)
+GITHUB_TOKEN=your_github_personal_access_token
+GEMINI_API_KEY=your_google_gemini_api_key
+
+### 3. Install Dependencies
+It is recommended to use a virtual environment to avoid dependency conflicts. Follow these steps in your terminal:
+
+```bash
+# Create a virtual environment
+python -m venv env
+
+# Activate the environment
+# Windows:
+.\env\Scripts\activate
+
+# Mac/Linux:
+source env/bin/activate
+
+# Install all required libraries
+pip install -r requirements.txt
+
+---
+
+## 🚀 Usage
+
+### 1. Run the Generator
 Run the main script to generate and sync your release notes:
-Bash
-  python generate_notes.py
-  Enter the Repository: Type the user/repo (e.g., Namrata-Web/ClipBar).
 
-AI Analysis: The system will fetch all changes since the last release.
-Local Save: A RELEASE_NOTES.md file is created in your folder.
-GitHub Sync: The script attempts to push the notes directly to the repository.
+```bash
+python generate_notes.py
 
-⚠️ Troubleshooting Errors
-The tool uses a One-Word Cause system to help you diagnose issues quickly:
 
-[AUTH]: Your GitHub token is invalid or expired.
-[ACL]: Your token works, but you don't have "Write" permissions for that specific repository.
-[RESOURCE]: The repository name is mistyped or the repo is private.
-[QUOTA]: You have exceeded the Gemini API free tier limits (wait 60 seconds).
+
